@@ -16,6 +16,7 @@ const store = createStore({
             state.todos = todos
             // console.log(state.todos);
         },
+
         deleteTodo:(state,id)=>{
             state.todos = state.todos.filter((item)=>item.id!==id)
             console.log(state.todos);
@@ -33,7 +34,8 @@ const store = createStore({
         },
         deleteTodo:({commit} , id)=>{
             commit('deleteTodo',id)
-        }
+        },
+       
     },
     // 获取状态的方法（可以进行计算）
     getters: {

@@ -1,7 +1,11 @@
 <template>
-   <h1>待办事项</h1>
+     
+    
+   <div class="box">
+    <el-text type="primary"><h1 class="title">待办事项</h1></el-text>
    <TodoForm></TodoForm>
    <TodoList></TodoList>
+   </div>
 </template>
 
 <script setup>
@@ -9,6 +13,15 @@
     import TodoList from '../components/TodoList.vue';
 </script>
 
-<style>
+<style scoped>
+    /* .title{
+        display: flex;
+        justify-content: center;
+    }*/
+    .box{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     
+    } 
 </style>

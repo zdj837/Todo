@@ -1,9 +1,14 @@
 <template>
     <!-- 输入表单 -->
-    <form @submit.prevent="addTodo">
+    <el-form class="input" @submit.prevent = "addTodo">
+        <el-input v-model="newTodo" placeholder="请输入待办事项" style="width: 450px;"/>
+        <el-button  type="primary" @click="addTodo"> 添加</el-button>
+    </el-form>
+    
+    <!-- <form @submit.prevent="addTodo">
         <input type="text" v-model="newTodo">
         <button type="submit">添加</button>
-    </form>
+    </form> -->
 </template>
 <script setup>
     import {ref} from 'vue'
@@ -19,3 +24,6 @@
    }
    
 </script>
+<style scoped>
+
+</style>
